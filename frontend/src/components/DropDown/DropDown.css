@@ -1,0 +1,101 @@
+.dropdown-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 340px;
+    overflow: visible;
+    z-index: 2;
+}
+
+#pose-dropdown-btn {
+    width: 100%;
+}
+
+.pose-dropdown-btn {
+    width: 100%;
+    min-width: 240px;
+    border: none;
+    border-radius: 18px;
+    padding: 0.95rem 1.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #fff;
+    color: var(--deep);
+    box-shadow: 0 20px 40px rgba(86, 112, 189, 0.22);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+}
+
+.pose-dropdown-btn:hover,
+.pose-dropdown-btn:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 35px 55px rgba(86, 112, 189, 0.3);
+    background: #fff;
+    color: var(--deep);
+}
+
+.caret {
+    font-size: 0.8rem;
+    transition: transform 0.25s ease;
+}
+
+.caret.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-custom-menu {
+    overflow-y: auto;
+    max-height: 45vh;
+    padding: 6px 0;
+    border-radius: 12px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 9999;
+    width: 100%;
+    min-width: 240px;
+}
+
+.dropdown-custom-menu.show {
+    display: block;
+}
+
+.dropdown-custom-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.dropdown-item-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+    font-size: 1rem;
+}
+
+.dropdown-item-container:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.dropdown-item-1 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--deep);
+}
+
+.dropdown-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
